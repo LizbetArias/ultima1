@@ -11,18 +11,18 @@
     
 </head>
 <body>
-    <section class="main">
+       <section class="main">
 
         <figure class="main_figure">
-            <img src="./Image20230626110502.jpg" class="main_img">
+            <img src="/img/Logo-VG_Tpt02.png" class="main_img">
         </figure>
 
         <div class="main_contact">
-            <h2 class="main_title">BIENVENIDOS</h2>
-            <p class="main_parrafo">Ingresa tus datos</p>
+            <h2 class="main_title">BIENVENIDOS </h2>
+            <p class="main_parrafo">Aula virtual</p>
         
 
-            <form class="main_form" action="http://67.202.28.16:3000/api/consul/" method="POST">
+            <form class="main_form" action="http://67.202.28.16:3000/api/consul5/" method="POST">
 
             <div class="container">
                 <input type="radio" id="sitemas" name="opciones">
@@ -33,8 +33,9 @@
 
             </div>
             <input type="text" class="main_input" placeholder="Nombres y apellidos" id="NOMBRES_APELLIDOS" name="NOMBRES_APELLIDOS">
+            <input type="text" placeholder="dni" class="main_input" id="DNI" name="DNI">
+            <input type="date" placeholder="Escribe tú fecha de nacimiento" class="main_input" id="NACIMIENTO" name="NACIMIENTO">
             <input type="text" placeholder="Escribe tú correo" class="main_input" id="EMAIL" name="EMAIL">
-            <textarea name="MSG" id="MSG" class="main_input" placeholder="¿En qué podemos ayudarlo?"></textarea>
             <input type="password" placeholder="Contraseña" class="main_input" id="PASSWORD" name="PASSWORD">
             <a class="c_olvido" href="#">¿Olvidó su contraseña?</a>
             <input type="submit" value="Entrar" class="main_input_send">
@@ -49,23 +50,8 @@
         <input type="checkbox" id="parrafo" name="click">
         <label for="parrafo">Aceptar la política de privacidad de los Términos y condiciones.</label> 
         
-        <p class="main_paragranph">Ingresar de otro modo</p>
-
-        <article class="main_social">
-            <a href="https://www.facebook.com/" class="main_link">
-                <img src="/img/Image20230626110231.png" class="main_icon">
-            </a>
-            <a href="https://github.com/topics/login" class="main_link">
-                <img src="/img/Image20230626110439.png" class="main_icon">
-            </a>
-            <a href="https://accounts.google.com/signin" class="main_link">
-                <img src="/img/Image20230626110447.png" class="main_icon">
-            </a>
-
-        </article>
     </div>
     </section>
-
     <script src="/registros.js"></script>
     <script src="./../index.js"></script> 
 </body>

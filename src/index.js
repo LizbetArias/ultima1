@@ -12,7 +12,7 @@ const connection = mysql.createConnection({
   host: '127.0.0.1',
   user: 'verde',
   password: 'admin',
-  database: 'prueba',
+  database: 'prueba5',
 });
 
 connection.connect((err) => {
@@ -28,18 +28,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Ruta para insertar los datos del formulario en la base de datos
-app.post('/api/consul', (req, res) => {
-  const { NOMBRES_APELLIDOS, EMAIL, MSG ,PASSWORD} = req.body;
+app.post('/api/consul5', (req, res) => {
+  const { NOMBRES_APELLIDOS, DNI, NACIMIENTO, EMAIL, PASSWORD} = req.body;
 
   // Verificar que todos los campos estén llenos
-  if (!NOMBRES_APELLIDOS|| !EMAIL || !MSG || !PASSWORD ) {
+  if (!NOMBRES_APELLIDOS || !DNI || !NACIMIENTO || !EMAIL || !PASSWORD ) {
     res.status(400).json({ error: 'Asegúrese de que todos los campos estén completos' });
     return;
   }
+  const mensaje = { NOMBRES_APELLIDOS, DNI, NACIMIENTO, EMAIL, PASSWORD };
 
-  const mensaje = { NOMBRES_APELLIDOS, EMAIL, MSG, PASSWORD };
-
-  connection.query('INSERT INTO consul SET ?', mensaje, (err, result) => {
+  connection.query('INSERT INTO consul5 SET ?', mensaje, (err, result) => {
     if (err) {
       console.error('Error al insertar los datos:', err);
       res.sendStatus(500);
